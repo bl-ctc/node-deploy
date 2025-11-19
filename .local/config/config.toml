@@ -1,0 +1,124 @@
+[Eth]
+NetworkId = 12301
+SyncMode = "full"
+DisablePeerTxBroadcast = false
+EVNNodeIDsToAdd = []
+EVNNodeIDsToRemove = []
+EthDiscoveryURLs = []
+SnapDiscoveryURLs = []
+BscDiscoveryURLs = []
+NoPruning = false
+NoPrefetch = false
+DirectBroadcast = false
+DisableSnapProtocol = false
+RangeLimit = false
+JournalFileEnabled = false
+DatabaseCache = 512
+DatabaseFreezer = ""
+PruneAncientData = false
+TrieCleanCache = 256
+TrieDirtyCache = 256
+TrieTimeout = 3600000000000
+SnapshotCache = 0
+TriesInMemory = 128
+TriesVerifyMode = "local"
+Preimages = false
+FilterLogCacheSize = 0
+EnablePreimageRecording = false
+VMTrace = ""
+VMTraceJsonConfig = ""
+RPCGasCap = 0
+RPCEVMTimeout = 0
+RPCTxFeeCap = 0e+00
+BlobExtraReserve = 0
+
+[Eth.Miner]
+GasFloor = 0
+GasCeil = 35000000
+GasPrice = 1000000000
+Recommit = 10000000000
+VoteEnable = false
+DisableVoteAttestation = false
+
+[Eth.Miner.Mev]
+Enabled = true
+GreedyMergeTx = true
+BuilderFeeCeil = "0"
+SentryURL = ""
+ValidatorCommission = 1000
+
+[[Eth.Miner.Mev.Builders]]
+Address = "0x04d63abcd2b9b1baa327f2dda0f873f197ccd186"
+URL = ""
+
+[Eth.TxPool]
+Locals = []
+NoLocals = true
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1000000000
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+OverflowPoolSlots = 0
+Lifetime = 10800000000000
+ReannounceTime = 0
+
+[Eth.BlobPool]
+Datadir = ""
+Datacap = 0
+PriceBump = 0
+
+[Eth.GPO]
+Blocks = 0
+Percentile = 0
+MaxHeaderHistory = 0
+MaxBlockHistory = 0
+
+[Node]
+DataDir = ""
+InsecureUnlockAllowed = true
+EnableEVNFeatures = true
+EnableQuickBlockFetching = true
+IPCPath = "geth.ipc"
+HTTPHost = "127.0.0.1"
+HTTPPort = 8545
+HTTPVirtualHosts = ["*"]
+HTTPModules = ["eth", "mev", "net", "web3", "txpool", "parlia", "debug"]
+WSHost = "0.0.0.0"
+WSPort = 8546
+WSModules = []
+
+[Node.P2P]
+MaxPeers = 50
+NoDiscovery = false
+BootstrapNodes = [
+"enode://4f5fc694a69903c1e08d1ba86211d42794bd10b41ddc5c7aeb7ec9c67612196e3dedcf08a3eadcf8fac52f2cccb749157bf87ba162c7007bcbfd17ed494c2fb1@13.213.57.247:31000"
+]
+StaticNodes = []
+TrustedNodes = []
+ListenAddr = ":30311"
+DiscAddr = ""
+EnableMsgEvents = false
+PeerFilterPatterns = []
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+ReadHeaderTimeout = 0
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
+
+[Node.LogConfig]
+FileRoot = ""
+FilePath = "ctc.log"
+MaxBytesSize = 10485760
+Level = "info"
+MaxBackups = 1000
+TimeFormat = "01-02|15:04:05.000"
+
+[FakeBeacon]
+Enable = false
+Addr = ""
+Port = 0
