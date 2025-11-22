@@ -53,7 +53,7 @@ function start() {
   --ws.addr 0.0.0.0 --ws.port $(( 8546 + $index )) --ws.api "eth,net,web3,debug" \
   --http.addr 0.0.0.0 --http.port $(( 8545 + $index )) --http.corsdomain "*" \
   --metrics --metrics.addr 0.0.0.0 --metrics.port $(( 6100 + $index )) --metrics.expensive \
-  --gcmode $gcmode --syncmode $syncmode --state.scheme ${stateScheme} $extraflags \
+  --syncmode ${syncmode} --gcmode ${gcmode} --state.scheme ${stateScheme} $extraflags \
   --rialtohash ${rialtoHash} --override.passedforktime 0 --override.lorentz 0 --override.maxwell 0 \
   --override.immutabilitythreshold ${FullImmutabilityThreshold} --override.breatheblockinterval ${BreatheBlockInterval} \
   --override.minforblobrequest ${MinBlocksForBlobRequests} --override.defaultextrareserve ${DefaultExtraReserveForBlobRequests} \
