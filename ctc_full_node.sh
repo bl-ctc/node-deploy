@@ -50,7 +50,7 @@ function start() {
   --miner.gasprice=7110504285714 \
   --http \
   --http.api "eth,net,web3,admin,debug,txpool" \
-  --ws.addr 0.0.0.0 --ws.port $(( 8546 + $index )) --ws.api "eth,net,web3,debug" \
+  --ws.addr 0.0.0.0 --ws.port $(( 8546 + $index )) --ws.api "eth,net,web3,admin,debug,txpool" \
   --http.addr 0.0.0.0 --http.port $(( 8545 + $index )) --http.corsdomain "*" \
   --metrics --metrics.addr 0.0.0.0 --metrics.port $(( 6100 + $index )) --metrics.expensive \
   --syncmode ${syncmode} --gcmode ${gcmode} --state.scheme ${stateScheme} $extraflags \

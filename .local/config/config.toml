@@ -86,10 +86,10 @@ IPCPath = "geth.ipc"
 HTTPHost = "127.0.0.1"
 HTTPPort = 8545
 HTTPVirtualHosts = ["*"]
-HTTPModules = ["eth", "mev", "net", "web3", "txpool", "parlia", "debug"]
+HTTPModules = ["eth", "mev", "net", "web3", "txpool", "parlia", "debug", "trace"]
 WSHost = "0.0.0.0"
 WSPort = 8546
-WSModules = []
+WSModules = ["eth", "debug", "net", "web3", "txpool", "trace"]
 
 [Node.P2P]
 MaxPeers = 50
